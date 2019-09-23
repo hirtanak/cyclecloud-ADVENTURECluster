@@ -15,7 +15,7 @@
 1. run "cyclecloud project upload azure-storage" for uploading template to CycleCloud
 1. "cyclecloud import_template -f templates/pbs_extended_nfs_advc.txt" for register this template to your CycleCloud
 
-## How to run ADVC
+## How to run ADVC 
 
 1. Check License Server setting
 1. Upload and Modify PBS script file
@@ -51,18 +51,20 @@ export I_MPI_FABRICS=shm:ofa # for 2019, use I_MPI_FABRICS=shm:ofi
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/shared/home/azureuser/apps/Solver-2019R1_0r19/user_lib
 source /opt/intel/compilers_and_libraries/linux/mpi/bin64/mpivars.sh
 
-# running config
+# running config 
 INPUT=/mnt/exports/shared/home/azureuser/model_v2.adv
 
 cd ${PBS_O_WORKDIR}
 ${ADVC_DIR}/ADVCSolver ${INPUT} -np ${NP} | tee ADVC-`date +%Y%m%d_%H-%M-%S`.log
 </pre></code>
 
-## Known Issues
+## Known Issues 
 1. This tempate support only single administrator. So you have to use same user between superuser(initial Azure CycleCloud User) and deployment user of this template
 1. Currently AutoScale is disabled. you have to create execute node and get IP. In addtion, create hosts file for your execute node environment.
 
-## Azure CycleCloud用テンプレート:ADVC(NFS/PBSPro)
+---
+
+# Azure CycleCloud用テンプレート:ADVC(NFS/PBSPro) 
 
 [Azure CycleCloud](https://docs.microsoft.com/en-us/azure/cyclecloud/) はMicrosoft Azure上で簡単にCAE/HPC/Deep Learning用のクラスタ環境を構築できるソリューションです。
 
