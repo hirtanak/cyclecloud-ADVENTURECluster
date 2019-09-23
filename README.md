@@ -9,17 +9,17 @@
 
 1. tar zxvf cyclecloud-ADVC<version>.tar.gz
 2. cd cyclecloud-ADVC<version>
-2. put ADVC library/model on <template>/blob directory.
-4. pug OSS PBS Pro files on <template>/blob directory.
+2. put ADVC library/model on <template>/blobs directory.
+4. pug OSS PBS Pro files on <template>/blobs directory.
 5. Rewrite "Files" attribute for your binariy in "project.ini" file. 
 6. run "cyclecloud project upload azure-storage" for uploading template to CycleCloud
-7. "cyclecloud import_template -f templates/pbs_extended_nfs_starccm.txt" for register this template to your CycleCloud
+7. "cyclecloud import_template -f templates/pbs_extended_nfs_advc.txt" for register this template to your CycleCloud
 
-## How to run  ADVC
+### How to run  ADVC
 
 1. Check License Server setting
-3. Upload and Modify PBS script file
-4. qsub ~/advcrun.sh (sample as below)
+2. Upload and Modify PBS script file
+3. qsub ~/advcrun.sh (sample as below)
 
 <pre><code>
 #!/bin/bash 
