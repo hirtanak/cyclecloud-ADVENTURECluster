@@ -5,17 +5,16 @@
 1. Prepaire for your ADVC bilnary.
 1. Install CycleCloud CLI
 
-## How to install 
+## How to install
 
 1. tar zxvf cyclecloud-ADVC<version>.tar.gz
-1. cd cyclecloud-ADVC<version>
-1. put ADVC library/model on <template>/blobs directory.
-1. pug OSS PBS Pro files on <template>/blobs directory.
-1. Rewrite "Files" attribute for your binariy in "project.ini" file. 
+1. cd cyclecloud-ADVC
+1. put your ADVC binanry /blob directory.
+1. Rewrite "Files" attribute for your binariy in "project.ini" file.
 1. run "cyclecloud project upload azure-storage" for uploading template to CycleCloud
 1. "cyclecloud import_template -f templates/pbs_extended_nfs_advc.txt" for register this template to your CycleCloud
 
-## How to run ADVC 
+## How to run ADVC
 
 1. Check License Server setting
 1. Upload and Modify PBS script file
@@ -66,7 +65,7 @@ ${ADVC_DIR}/ADVCSolver ${INPUT} -np ${NP} | tee ADVC-`date +%Y%m%d_%H-%M-%S`.log
 
 # Azure CycleCloud用テンプレート:ADVC(NFS/PBSPro) 
 
-[Azure CycleCloud](https://docs.microsoft.com/en-us/azure/cyclecloud/) はMicrosoft Azure上で簡単にCAE/HPC/Deep Learning用のクラスタ環境を構築できるソリューションです。
+[Azure CycleCloud](https://docs.microsoft.com/en-us/azure/cyclecloud/) はMicrosoft Azure上で簡単にCAE/HPC/Deep Learning用のクラスタ環境を構築できるソリューションです。（図はOSS PBS Proテンプレートの場合）
 
 ![Azure CycleCloudの構築・テンプレート構成](https://raw.githubusercontent.com/hirtanak/osspbsdefault/master/AzureCycleCloud-OSSPBSDefault.png "Azure CycleCloudの構築・テンプレート構成")
 
@@ -83,7 +82,7 @@ ADVC用のテンプレートになっています。
 1. MasterノードのIPアドレスを固定設定
 	 - 一旦停止後、再度起動した場合にアクセスする先のIPアドレスが変更されない
 
-![テンプレート構成](https://raw.githubusercontent.com/hirtanak/osspbsdefault/master/OSSPBSDefaultDiagram.png "テンプレート構成")
+![ADVENTURECluster テンプレート構成](https://raw.githubusercontent.com/hirtanak/scripts/master/cctemplatedefaultdiagram.png "ADVENTURECluster テンプレート構成")
 
 ADVC用テンプレートインストール方法
 
